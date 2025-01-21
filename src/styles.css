@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+}
+
+#frame {
+    background-color: yellow;
+    height: 520px;
+    width: 520px;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0px 0px 10px;
+}
+
+#containerFrame {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+#photoContainer {
+    width: 2000px;
+    height:500px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    height: 460px;
+    width:460px;
+    margin: 20px;
+    background-color: red;
+}
+
+.frameButton {
+    z-index: 1;
+    position: absolute;
+    height: 100px;
+    width:100px;
+    background-color: white;
+    box-shadow: 0px 0px 10px;
+    font-size: 4em;
+    text-align: center;
+}
+
+#next {
+    bottom:10px;
+    right:10px;
+}
+
+#previous {
+    bottom:10px;
+    left:10px;
+}

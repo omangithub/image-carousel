@@ -103,11 +103,9 @@
 .photo {
     height: 460px;
     width:460px;
-    transition: 2s;
     background: no-repeat;
     background-size: contain;
     background-position: center;
-    transition: all 3s;
 }
 
 .fadeOut {
@@ -115,7 +113,13 @@
 }
 
 .fadeIn {
-    opacity:1;
+    opacity: 1;
+    animation: fade 1s linear;
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
 
 #slide1 {

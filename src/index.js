@@ -12,11 +12,11 @@ const frameFunctions = (function() {
         if (photoNumber<4) {
         let thisSlide = document.getElementById("slide"+photoNumber)
         thisSlide.classList.toggle("hidden");
-        thisSlide.classList.toggle("faceOut");
+        thisSlide.classList.toggle("fadeOut");
         photoNumber++;
         let nextSlide = document.getElementById("slide"+photoNumber)
         nextSlide.classList.toggle("hidden");
-        nextSlide.classList.toggle("fadeIn");
+        nextSlide.classList.toggle("fadeOut");
 
 
         if (photoNumber===1) {
@@ -33,11 +33,11 @@ const frameFunctions = (function() {
     back.addEventListener("click",()=>{
         if (photoNumber>1) {
         let thisSlide = document.getElementById("slide"+photoNumber)
-        thisSlide.classList.toggle("faceOut");
+        thisSlide.classList.toggle("fadeOut");
         thisSlide.classList.toggle("hidden");
         photoNumber--;
         let nextSlide = document.getElementById("slide"+photoNumber)
-        nextSlide.classList.toggle("fadeIn"); 
+        nextSlide.classList.toggle("fadeOut"); 
         nextSlide.classList.toggle("hidden");
 
     if (photoNumber===1) {
@@ -56,12 +56,13 @@ const frameFunctions = (function() {
         if (photoNumber<4) {
             let thisSlide = document.getElementById("slide"+photoNumber)
             thisSlide.classList.toggle("hidden");
-            thisSlide.classList.toggle("faceOut");
+            thisSlide.classList.toggle("fadeOut");
+            thisSlide.classList.toggle("fadeIn");
             photoNumber++;
             let nextSlide = document.getElementById("slide"+photoNumber)
             nextSlide.classList.toggle("hidden");
-            nextSlide.classList.toggle("fadeIn");
-    
+            nextSlide.classList.toggle("fadeOut");
+            nextSlide.classList.toggle("fadeIn");    
     
             if (photoNumber===1) {
                 navigator.innerText="| O O O";
@@ -75,11 +76,13 @@ const frameFunctions = (function() {
         } else if (photoNumber===4) {
             let thisSlide = document.getElementById("slide"+photoNumber)
             thisSlide.classList.toggle("hidden");
-            thisSlide.classList.toggle("faceOut");
+            thisSlide.classList.toggle("fadeOut");
+            thisSlide.classList.toggle("fadeIn"); 
             photoNumber=1;
             let nextSlide = document.getElementById("slide"+photoNumber)
             nextSlide.classList.toggle("hidden");
-            nextSlide.classList.toggle("fadeIn");
+            nextSlide.classList.toggle("fadeOut");
+            nextSlide.classList.toggle("fadeIn"); 
             navigator.innerText="| O O O"; 
         }
     }, 5000);

@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+.hidden {
+    display:none;
+}
+
 #frame {
     background-color: yellow;
     height: 520px;
@@ -16,8 +20,9 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    position: relative;
     box-shadow: inset 0px 0px 10px;
+    z-index: 2;
+    position: relative;
 }
 
 #containerFrame {
@@ -31,8 +36,13 @@
 }
 
 #photoContainer {
-    width: 2000px;
+    position: relative;
+    z-index:0;
+    left:0;
+    width: 100%;
     height:500px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: blue;
     display: flex;
     flex-direction: row;
@@ -49,7 +59,7 @@
 }
 
 .frameButton {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     height: 100px;
     width:100px;
@@ -58,6 +68,27 @@
     font-size: 4em;
     text-align: center;
 }
+
+.frameButton:hover{
+    background-color: rgb(202, 202, 202);
+}
+
+#slideNavigator {
+    z-index: 2;
+    position: absolute;
+    height: 40px;
+    width:150px;
+    background-color: white;
+    font-size: 2em;
+    text-align: center;
+    bottom:10px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px black solid;
+}
+
 
 #next {
     bottom:10px;
@@ -68,3 +99,38 @@
     bottom:10px;
     left:10px;
 }
+
+.photo {
+    height: 460px;
+    width:460px;
+    transition: 2s;
+    background: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: all 3s;
+}
+
+.fadeOut {
+    opacity:0;
+}
+
+.fadeIn {
+    opacity:1;
+}
+
+#slide1 {
+    background-image: url(./images/ashley.jpg);
+}
+
+#slide2 {
+    background-image: url(./images/cat.jpg);
+}
+
+#slide3 {
+    background-image: url(./images/dragon.jpg);
+}
+
+#slide4 {
+    background-image: url(./images/kieran.jpg);
+}
+

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link src="styles.css" href="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
   </head>
   <body>
     <header></header>
@@ -13,13 +14,15 @@
       <div id="photoContainer">
         <button id="next" class="frameButton">></button>
         <button id="previous" class="frameButton"><</button>
+        <div id="slideNavigator" class="slideMarker">| O O O</div>
         <div id="slide1" class="photo"></div>
-        <div id="slide2" class="photo"></div>
-        <div id="slide3" class="photo"></div>
-        <div id="slide4" class="photo"></div>
+        <div id="slide2" class="photo hidden"></div>
+        <div id="slide3" class="photo hidden"></div>
+        <div id="slide4" class="photo hidden"></div>
       </div>
 
     </div>
   </div>
-  </body>
+  <script src="index.js"></script>
+</body>
 </html>
